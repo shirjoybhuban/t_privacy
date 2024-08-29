@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #161616;
+  color: #ffffff;
+  margin: 0px;
+}
+
+header {
+  width: 100%;
+  padding: 25px 15px;
+  border-bottom: 1px solid #363636;
+  position: fixed;
+  background: #161616;
+}
+
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 0px;
+  
+}
+
+.side-bar {
+  width: 360px;
+  height: 100vh;
+  position: fixed;
+  margin-top: 50px;
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li.menu-list {
+  border-bottom: 1px solid #363636;
+  border-radius: 5px;
+}
+nav ul li .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all ease-out 250ms;
+  cursor: pointer;
+}
+
+nav ul li .item div {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+nav ul li .item div p {
+margin: 0px;
+}
+
+nav li .item i {
+  color: #ffffff;
+}
+
+nav li .item a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+nav li .item:hover a {
+  color: #009ff3;
+}
+
+nav li .item:hover p {
+  color: #009ff3;
+}
+
+nav li .child-item {
+  margin-left: 0px;
+  margin-bottom: 20px;
+  list-style: decimal;
+}
+
+nav li .child-item li {
+  padding: 5px 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all ease-out 250ms;
+  cursor: pointer;
+}
+
+nav li .child-item li a {
+  text-decoration: none;
+  color: #dadada;
+}
+
+.main-content {
+  margin-left: 360px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+section {
+  margin: 0;
+  padding: 2rem;
+}
+
+.active-parent {
+  color: #009ff3 !important;
+}
+
+.active-child {
+  color: #7ed0fc !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
