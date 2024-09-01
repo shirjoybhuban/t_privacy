@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 * {
   box-sizing: border-box;
@@ -9,30 +9,32 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'SF Pro Display', sans-serif;
   background-color: #161616;
   color: #ffffff;
   margin: 0px;
+  font-size: 15px;
+  line-height: 30px;
 }
 
 header {
   width: 100%;
   padding: 25px 15px;
-  border-bottom: 1px solid #363636;
+  border-bottom: 1px solid #474747 ;
   position: fixed;
   background: #161616;
 }
 
 main {
   display: flex;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   padding: 25px 0px;
-  
 }
 
-.side-bar {
-  width: 360px;
+nav {
+  display:block;
+  width: 400px;
   height: 100vh;
   position: fixed;
   margin-top: 50px;
@@ -40,20 +42,22 @@ main {
 
 nav ul {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 nav ul li.menu-list {
-  border-bottom: 1px solid #363636;
-  border-radius: 5px;
+  border-bottom: 1px solid #474747 ;
 }
 nav ul li .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 9px;
+  gap: 20px;
   padding: 15px 10px;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 20px;
+  letter-spacing: 0.50px;
   transition: all ease-out 250ms;
   cursor: pointer;
 }
@@ -74,7 +78,6 @@ nav li .item i {
 
 nav li .item a {
   text-decoration: none;
-  font-weight: 400;
   color: #ffffff;
 }
 
@@ -87,16 +90,18 @@ nav li .item:hover p {
 }
 
 nav li .child-item {
-  margin-left: 0px;
+  padding: 0px;
+  margin-left: 35px;
   margin-bottom: 20px;
   list-style: decimal;
 }
 
 nav li .child-item li {
   padding: 5px 5px;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 20px;
+  letter-spacing: 0.50px;
   transition: all ease-out 250ms;
   cursor: pointer;
 }
@@ -107,7 +112,7 @@ nav li .child-item li a {
 }
 
 .main-content {
-  margin-left: 360px;
+  margin-left: 400px;
   margin-top: 50px;
   width: 100%;
 }
@@ -122,7 +127,7 @@ section {
 }
 
 .active-child {
-  color: #7ed0fc !important;
+  color: #53bef8 !important;
 }
 
 .d-block {
@@ -131,4 +136,23 @@ section {
 
 .d-none {
   display: none !important;
+}
+
+.mobile-dropdown {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #474747 ;
+  color: #B4B4B4;
+  padding: 0px 18px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  transition: all ease-out 250ms;
+  cursor: pointer;
+  margin-top: 45px;
+}
+
+.mobile-dropdown i{
+  font-size: 20px;
 }
