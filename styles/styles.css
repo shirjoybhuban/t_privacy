@@ -19,10 +19,58 @@ body {
 
 header {
   width: 100%;
-  padding: 25px 15px;
+  padding: 15px 50px;
   border-bottom: 1px solid #474747 ;
   position: fixed;
   background: #161616;
+  display: flex;
+  align-items: center;
+}
+
+header .head-body{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .head-body .top-nav{
+  display: flex;
+  align-items: center;
+  gap:25px;
+  flex-wrap: wrap;
+}
+
+.bt-grad{
+  background-image: linear-gradient(to right, #2D68D4 0%, #00A2FF  100%);
+  padding: 5px 22px; 
+  text-align: center;
+  transition: 0.5s;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bt-grad:hover{
+  background-image: linear-gradient(to right, #00A2FF 0%, #2D68D4  100%);
+}
+
+header .head-body .top-nav .top-nav-li{
+  font-size: 16px;
+  font-weight: 500;
+  color: "#E0E0E0";
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+header .head-body .top-nav .top-nav-li:hover{
+  color: #009ff3;
+}
+
+header img{
+  width: 160px;
+  height: 41px;
 }
 
 main {
@@ -37,7 +85,7 @@ nav {
   width: 400px;
   height: 100vh;
   position: fixed;
-  margin-top: 50px;
+  margin-top: 125px;
 }
 
 nav ul {
@@ -113,7 +161,7 @@ nav li .child-item li a {
 
 .main-content {
   margin-left: 400px;
-  margin-top: 50px;
+  margin-top: 85px;
   width: 100%;
 }
 
@@ -144,13 +192,13 @@ section {
   align-items: center;
   border-bottom: 1px solid #474747 ;
   color: #B4B4B4;
-  padding: 0px 18px;
+  padding: 0px 10px;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
   transition: all ease-out 250ms;
   cursor: pointer;
-  margin-top: 45px;
+  margin-top: 55px;
 }
 
 .mobile-dropdown i{
