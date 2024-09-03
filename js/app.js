@@ -25,7 +25,7 @@ function navHighlighter() {
           secondChild.classList.remove("d-none");
           secondChild.classList.add("d-block");
         }
-        childnNvHighlighter(current, parent);
+        childNvHighlighter(current, parent);
       } else {
         hyperlink.classList.remove("active-parent");
         if (secondChild && secondChild.classList.contains("d-block")) {
@@ -39,7 +39,7 @@ function navHighlighter() {
   });
 }
 
-function childnNvHighlighter(current, menu) {
+function childNvHighlighter(current, menu) {
   let scrollVertical = window.scrollY;
 
   //Menu
@@ -57,20 +57,14 @@ function childnNvHighlighter(current, menu) {
       const childSectionHeight = childList[key].offsetHeight;
       const childSectionTop = childList[key].offsetTop - 550;
       let singleChild = childMenuList[childMenuIndex];
-      // console.log("childMenu",childSectionId);
-      // console.log("childMenuList",childMenuList);
-      // console.log("childMenuIndex",childMenuIndex);
-      //  console.log("singleChild",singleChild);
       if (
-        singleChild && scrollVertical > childSectionTop &&
+        singleChild &&
+        scrollVertical > childSectionTop &&
         scrollVertical <= childSectionTop + childSectionHeight
       ) {
         singleChild.children[0].classList.add("active-child");
-        // console.log('Adding');
-        
       } else {
         singleChild.children[0].classList.remove("active-child");
-        // console.log('Removing');
       }
     });
 }
