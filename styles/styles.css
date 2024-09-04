@@ -44,12 +44,10 @@ header .head-body .top-nav{
 .gradient-header {
   font-size: 3rem;
   font-weight: bold;
-  min-height: 51px;
-  background: linear-gradient(to right, #33C1FF, #ffffff);
+  background: linear-gradient(to right, #33C1FF, #dff2fa, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  min-height: 42px;
 }
 
 .bt-grad{
@@ -86,14 +84,14 @@ header img{
 
 main {
   display: flex;
-  max-width: 1300px;
+  max-width: 1500px;
   margin: auto;
   padding: 25px 0px;
 }
 
 nav {
   display:block;
-  width: 400px;
+  width: 450px;
   height: 100vh;
   position: fixed;
   margin-top: 125px;
@@ -138,6 +136,7 @@ nav li .item i {
 nav li .item a {
   text-decoration: none;
   color: #ffffff;
+  text-transform: capitalize;
 }
 
 nav li .item:hover a {
@@ -171,14 +170,14 @@ nav li .child-item li a {
 }
 
 .main-content {
-  margin-left: 400px;
+  margin-left: 450px;
   margin-top: 85px;
   width: 100%;
+  padding: 2rem;
 }
 
 section {
   margin: 0;
-  padding: 2rem;
 }
 
 .active-parent {
