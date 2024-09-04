@@ -21,11 +21,14 @@ function navHighlighter() {
       let secondChild = parent?.childNodes[3];
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         hyperlink.classList.add("active-parent");
-        if (secondChild && secondChild.classList.contains("d-none")) {
-          secondChild.classList.remove("d-none");
-          secondChild.classList.add("d-block");
-        }
+        if(secondChild){
+          if (secondChild.classList.contains("d-none")) {
+            secondChild.classList.remove("d-none");
+            secondChild.classList.add("d-block");
+          }
         childNvHighlighter(current, parent);
+        }
+
       } else {
         hyperlink.classList.remove("active-parent");
         if (secondChild && secondChild.classList.contains("d-block")) {
