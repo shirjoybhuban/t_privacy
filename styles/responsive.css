@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   main {
     flex-direction: column;
   }
@@ -32,5 +32,68 @@
   }
   header .head-body .top-nav .top-nav-li {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-footer h1 {
+    font-size: 28px;
+  }
+
+  .sub-footer p {
+    font-size: 16px;
+  }
+
+  .app-store-button img {
+    width: 140px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin-bottom: 15px;
+  }
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #ffffff;
   }
 }

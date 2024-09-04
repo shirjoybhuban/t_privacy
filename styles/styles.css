@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   background-color: #161616;
   color: #ffffff;
   margin: 0px;
@@ -20,39 +20,65 @@ body {
 header {
   width: 100%;
   padding: 15px 50px;
-  border-bottom: 1px solid #474747 ;
+  border-bottom: 1px solid #474747;
   position: fixed;
   background: #161616;
   display: flex;
   align-items: center;
+  min-height: 100px;
 }
 
-header .head-body{
+.header-icon img {
+  width: 248px; /* adjust the width to your desired size */
+  height: auto; /* maintain the aspect ratio */
+}
+
+header .head-body {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1500px;
+  margin: auto;
 }
 
-header .head-body .top-nav{
+header .head-body .top-nav {
   display: flex;
   align-items: center;
-  gap:25px;
+  gap: 25px;
   flex-wrap: wrap;
+}
+
+a.top-nav-li {
+  all: unset;
+}
+
+a.bt-grad {
+  text-decoration: none;
 }
 
 .gradient-header {
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(to right, #33C1FF, #dff2fa, #ffffff);
+  background: linear-gradient(
+    to right,
+    #33c1ff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   min-height: 42px;
+  padding: 2px 0;
 }
 
-.bt-grad{
-  background-image: linear-gradient(to right, #2D68D4 0%, #00A2FF  100%);
-  padding: 5px 22px; 
+.bt-grad {
+  background-image: linear-gradient(to right, #2d68d4 0%, #00a2ff 100%);
+  padding: 5px 22px;
   text-align: center;
   transition: 0.5s;
   color: white;
@@ -60,11 +86,11 @@ header .head-body .top-nav{
   cursor: pointer;
 }
 
-.bt-grad:hover{
-  background-image: linear-gradient(to right, #00A2FF 0%, #2D68D4  100%);
+.bt-grad:hover {
+  background-image: linear-gradient(to right, #00a2ff 0%, #2d68d4 100%);
 }
 
-header .head-body .top-nav .top-nav-li{
+header .head-body .top-nav .top-nav-li {
   font-size: 16px;
   font-weight: 500;
   color: "#E0E0E0";
@@ -73,11 +99,11 @@ header .head-body .top-nav .top-nav-li{
   cursor: pointer;
 }
 
-header .head-body .top-nav .top-nav-li:hover{
-  color: #009ff3;
+header .head-body .top-nav .top-nav-li:hover {
+  color: #00f0ff;
 }
 
-header img{
+header img {
   width: 160px;
   height: 41px;
 }
@@ -90,11 +116,12 @@ main {
 }
 
 nav {
-  display:block;
+  display: block;
   width: 450px;
   height: 100vh;
   position: fixed;
-  margin-top: 125px;
+  margin-top: 135px;
+  /* z-index: -1; */
 }
 
 nav ul {
@@ -103,7 +130,7 @@ nav ul {
   margin: 0px;
 }
 nav ul li.menu-list {
-  border-bottom: 1px solid #474747 ;
+  border-bottom: 1px solid #474747;
 }
 nav ul li .item {
   display: flex;
@@ -114,7 +141,7 @@ nav ul li .item {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0.50px;
+  letter-spacing: 0.5px;
   transition: all ease-out 250ms;
   cursor: pointer;
 }
@@ -126,7 +153,7 @@ nav ul li .item div {
 }
 
 nav ul li .item div p {
-margin: 0px;
+  margin: 0px;
 }
 
 nav li .item i {
@@ -140,11 +167,11 @@ nav li .item a {
 }
 
 nav li .item:hover a {
-  color: #009ff3;
+  color: #00f0ff;
 }
 
 nav li .item:hover p {
-  color: #009ff3;
+  color: #00f0ff;
 }
 
 nav li .child-item {
@@ -159,7 +186,7 @@ nav li .child-item li {
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0.50px;
+  letter-spacing: 0.5px;
   transition: all ease-out 250ms;
   cursor: pointer;
 }
@@ -167,6 +194,26 @@ nav li .child-item li {
 nav li .child-item li a {
   text-decoration: none;
   color: #dadada;
+}
+
+.child-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+}
+
+.child-item.d-block {
+  max-height: 1000px; 
+  transition: max-height 0.6s ease-in;
+}
+
+i.fa-chevron-up,
+i.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+i.fa-chevron-up {
+  transform: rotate(180deg);
 }
 
 .main-content {
@@ -200,8 +247,8 @@ section {
   display: none;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #474747 ;
-  color: #B4B4B4;
+  border-bottom: 1px solid #474747;
+  color: #b4b4b4;
   padding: 0px 10px;
   font-size: 17px;
   font-weight: 700;
@@ -211,7 +258,7 @@ section {
   margin-top: 55px;
 }
 
-.mobile-dropdown i{
+.mobile-dropdown i {
   font-size: 20px;
 }
 
@@ -221,7 +268,21 @@ table {
   margin-bottom: 20px;
   background-color: #2c2c2c;
 }
-th, td {
+
+.table-thead {
+  background-color: #D9D9D9;
+  color: #161616;
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.table-thead p {
+  min-height: 35px;
+}
+
+th,
+td {
   border: 1px solid #444;
   padding: 12px;
   text-align: left;
@@ -234,31 +295,109 @@ th {
 tr:nth-child(even) {
   background-color: #333333;
 }
-@media screen and (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-      display: block;
-  }
-  thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-  }
-  tr {
-      margin-bottom: 15px;
-  }
-  td {
-      border: none;
-      position: relative;
-      padding-left: 50%;
-  }
-  td:before {
-      content: attr(data-label);
-      position: absolute;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: bold;
-      color: #ffffff;
-  }
+
+
+
+.sub-footer {
+  background: linear-gradient(to right, #66A3FF, #98FFF5, #FF81B7);
+  padding: 60px 20px;
+  text-align: center;
+  color: #161616;
+  z-index: 1000; 
+  position: relative;
 }
+
+.sub-footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sub-footer h2 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #121212;
+}
+
+.sub-footer p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #121212;
+  line-height: 31px;
+}
+
+.app-store-button img {
+  width: 180px; /* Adjust based on the actual size of your App Store button image */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.app-store-button img:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #111111;
+  padding: 0;
+  color: #ffffff;
+  z-index: 1000; 
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.footer-logo img {
+  width: 250px; /* Adjust based on the logo size */
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 34px;
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 15px;
+  font-weight: 400;
+  color: #D9D9D9;
+  line-height: 23px;
+}
+
+.footer-column ul li a:hover {
+  color: #00f0ff; /* Hover color for links */
+}
+
+
+
+
+
+
