@@ -6,7 +6,7 @@ function navHighlighter() {
   let scrollY = window.scrollY;
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 400;
+    const sectionTop = current.offsetTop - 150;
     let sectionId = current.getAttribute("id");
     let menuId = sectionId.split("-")[0];
 
@@ -51,6 +51,9 @@ function navHighlighter() {
 function childNvHighlighter(current, menu) {
   let scrollVertical = window.scrollY;
 
+  if(Object.keys(menu.children).length  < 2){
+    return;
+  }
   //Menu
   let childMenu = menu.children[1];
   let childMenuList = childMenu.children;
@@ -64,7 +67,7 @@ function childNvHighlighter(current, menu) {
       let childSectionId = childList[key].getAttribute("id");
       let childMenuIndex = parseInt(childSectionId.split("-")[1]) - 1;
       const childSectionHeight = childList[key].offsetHeight;
-      const childSectionTop = childList[key].offsetTop - 550;
+      const childSectionTop = childList[key].offsetTop - 200;
       let singleChild = childMenuList[childMenuIndex];
       if (
         singleChild &&
