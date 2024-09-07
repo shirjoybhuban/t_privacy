@@ -42,6 +42,11 @@ header .head-body {
   margin: auto;
 }
 
+header .head-body a{
+  display: flex;
+  align-items: center;
+}
+
 header .head-body .top-nav {
   display: flex;
   align-items: center;
@@ -194,6 +199,10 @@ nav li .child-item li {
 nav li .child-item li a {
   text-decoration: none;
   color: #dadada;
+}
+
+nav li .child-item li a:hover {
+  color: #00f0ff;
 }
 
 .child-item {
