@@ -1,0 +1,99 @@
+@media only screen and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    position: static;
+    height: fit-content;
+    margin-top: 0px;
+  }
+  nav ul li .item {
+    gap: 10px;
+    padding: 10px;
+    font-size: 13px;
+  }
+  nav li .child-item li {
+    font-size: 12px;
+  }
+  .main-content {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  section {
+    padding: 0rem 1rem;
+  }
+  .mobile-dropdown {
+    display: flex;
+  }
+  header {
+    padding: 5px 10px;
+  }
+  header .head-body .top-nav .top-nav-li {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-footer h1 {
+    font-size: 28px;
+  }
+
+  .sub-footer p {
+    font-size: 16px;
+  }
+
+  .app-store-button img {
+    width: 140px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin-bottom: 15px;
+  }
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #ffffff;
+  }
+}

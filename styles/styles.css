@@ -1,0 +1,403 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+  background-color: #161616;
+  color: #ffffff;
+  margin: 0px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+header {
+  width: 100%;
+  padding: 15px 50px;
+  border-bottom: 1px solid #474747;
+  position: fixed;
+  background: #161616;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+}
+
+.header-icon img {
+  width: 248px; /* adjust the width to your desired size */
+  height: auto; /* maintain the aspect ratio */
+}
+
+header .head-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: auto;
+}
+
+header .head-body .top-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+a.top-nav-li {
+  all: unset;
+}
+
+a.bt-grad {
+  text-decoration: none;
+}
+
+.gradient-header {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #33c1ff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  min-height: 42px;
+  padding: 2px 0;
+}
+
+.bt-grad {
+  background-image: linear-gradient(to right, #2d68d4 0%, #00a2ff 100%);
+  padding: 5px 22px;
+  text-align: center;
+  transition: 0.5s;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bt-grad:hover {
+  background-image: linear-gradient(to right, #00a2ff 0%, #2d68d4 100%);
+}
+
+header .head-body .top-nav .top-nav-li {
+  font-size: 16px;
+  font-weight: 500;
+  color: "#E0E0E0";
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+header .head-body .top-nav .top-nav-li:hover {
+  color: #00f0ff;
+}
+
+header img {
+  width: 160px;
+  height: 41px;
+}
+
+main {
+  display: flex;
+  max-width: 1500px;
+  margin: auto;
+  padding: 25px 0px;
+}
+
+nav {
+  display: block;
+  width: 450px;
+  height: 100vh;
+  position: fixed;
+  margin-top: 135px;
+  /* z-index: -1; */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+nav ul li.menu-list {
+  border-bottom: 1px solid #474747;
+}
+nav ul li .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 10px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  transition: all ease-out 250ms;
+  cursor: pointer;
+}
+
+nav ul li .item div {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+nav ul li .item div p {
+  margin: 0px;
+}
+
+nav li .item i {
+  color: #ffffff;
+}
+
+nav li .item a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+nav li .item:hover a {
+  color: #00f0ff;
+}
+
+nav li .item:hover p {
+  color: #00f0ff;
+}
+
+nav li .child-item {
+  padding: 0px;
+  margin-left: 35px;
+  margin-bottom: 20px;
+  list-style: decimal;
+}
+
+nav li .child-item li {
+  padding: 5px 5px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  transition: all ease-out 250ms;
+  cursor: pointer;
+}
+
+nav li .child-item li a {
+  text-decoration: none;
+  color: #dadada;
+}
+
+.child-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+}
+
+.child-item.d-block {
+  max-height: 1000px; 
+  transition: max-height 0.6s ease-in;
+}
+
+i.fa-chevron-up,
+i.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+i.fa-chevron-up {
+  transform: rotate(180deg);
+}
+
+.main-content {
+  margin-left: 450px;
+  margin-top: 85px;
+  width: 100%;
+  padding: 2rem;
+}
+
+section {
+  margin: 0;
+}
+
+.active-parent {
+  color: #009ff3 !important;
+}
+
+.active-child {
+  color: #53bef8 !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.mobile-dropdown {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #474747;
+  color: #b4b4b4;
+  padding: 0px 10px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  transition: all ease-out 250ms;
+  cursor: pointer;
+  margin-top: 55px;
+}
+
+.mobile-dropdown i {
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #2c2c2c;
+}
+
+.table-thead {
+  background-color: #D9D9D9;
+  color: #161616;
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.table-thead p {
+  min-height: 35px;
+}
+
+th,
+td {
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #3c3c3c;
+  font-weight: bold;
+  color: #ffffff;
+}
+tr:nth-child(even) {
+  background-color: #333333;
+}
+
+
+
+.sub-footer {
+  background: linear-gradient(to right, #66A3FF, #98FFF5, #FF81B7);
+  padding: 60px 20px;
+  text-align: center;
+  color: #161616;
+  z-index: 1000; 
+  position: relative;
+}
+
+.sub-footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sub-footer h2 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #121212;
+}
+
+.sub-footer p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #121212;
+  line-height: 31px;
+}
+
+.app-store-button img {
+  width: 180px; /* Adjust based on the actual size of your App Store button image */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.app-store-button img:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #111111;
+  padding: 0;
+  color: #ffffff;
+  z-index: 1000; 
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.footer-logo img {
+  width: 250px; /* Adjust based on the logo size */
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 34px;
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 15px;
+  font-weight: 400;
+  color: #D9D9D9;
+  line-height: 23px;
+}
+
+.footer-column ul li a:hover {
+  color: #00f0ff; /* Hover color for links */
+}
+
+
+
+
+
+
