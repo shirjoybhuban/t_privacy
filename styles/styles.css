@@ -121,7 +121,7 @@ nav {
   height: 100vh;
   position: fixed;
   margin-top: 135px;
-  /* z-index: -1; */
+  padding-left: 15px;
 }
 
 nav ul {
@@ -228,11 +228,11 @@ section {
 }
 
 .active-parent {
-  color: #009ff3 !important;
+  color: #00f0ff !important;
 }
 
 .active-child {
-  color: #53bef8 !important;
+  color: #00f0ff !important;
 }
 
 .d-block {
@@ -255,18 +255,29 @@ section {
   line-height: 18px;
   transition: all ease-out 250ms;
   cursor: pointer;
-  margin-top: 55px;
+  margin-top: 75px;
 }
 
 .mobile-dropdown i {
   font-size: 20px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  background-color: #2c2c2c;
+.content-table{
+  overflow-x: auto;
+}
+
+table{
+  border-radius: 5px;
+  border-spacing: 0;
+  border: 1px solid #444;
+  border-collapse: inherit;
+  background-color: #333333;
+  margin: 70px 0px;
+}
+
+th,
+td {
+  border: 1px solid #444;
 }
 
 .table-thead {
@@ -278,25 +289,55 @@ table {
 }
 
 .table-thead p {
-  min-height: 35px;
+  margin: 5px 0px;
 }
 
 th,
 td {
-  border: 1px solid #444;
-  padding: 12px;
+  padding: 15px;
   text-align: left;
 }
+
 th {
-  background-color: #3c3c3c;
   font-weight: bold;
   color: #ffffff;
 }
-tr:nth-child(even) {
-  background-color: #333333;
+
+td ul{
+  padding-left: 15px;
 }
 
+tr + tr th,
+tr + tr td {
+  border-top: 0;
+}
 
+th + th,
+th + td,
+td + th,
+td + td {
+  border-left: 0;
+}
+
+th:first-child,
+td:first-child {
+  border-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+tr:first-child th,
+tr:first-child td {
+  border-top: 0;
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: 0;
+}
 
 .sub-footer {
   background: linear-gradient(to right, #66A3FF, #98FFF5, #FF81B7);
@@ -321,7 +362,7 @@ tr:nth-child(even) {
 .sub-footer p {
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #121212;
   line-height: 31px;
 }
@@ -370,7 +411,6 @@ tr:nth-child(even) {
   color: #ffffff;
   line-height: 34px;
   margin-bottom: 30px;
-  
 }
 
 .footer-column ul {
@@ -380,7 +420,7 @@ tr:nth-child(even) {
 }
 
 .footer-column ul li {
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .footer-column ul li a {
